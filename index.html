@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Bingo-Anniversary'23</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset= "UTF-8">
+</head>
+
+<body>
+<main>
+<div class="overall-home-page">
+<div class="main-screen-1" id="screen-1">
+<h1>Welcome to BINGO's third Anniversary !!!! </h1>
+<h2>-->Let's BINGO !!</h2>
+<h3> Click on the <span>"Shuffle for BINGO"</span> button to select the next number</h3>
+<button class="play-shuffle" id="shuffle" onclick="shuffleForNextNumber()"> <span>Shuffle for BINGO</span></button> 
+
+<div class="plane-loader" id="plane-loader-area">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="26" fill="currentColor" class="bi bi-airplane-engines" viewBox="0 0 175 16">
+  <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z"/>
+</svg>
+</div>
+<div class="current-number">
+<span class="current-number-value" id="current-value">00
+</span>
+</div>
+</div>
+
+<div class="main-screen-2" id="screen-1">
+<h1>Previous Displayed Number is : <span style="color:yellow" id="last-number">0</span></h1>
+<h2>Numbers Closed till now: </h2>
+
+<div class="bingo-overall-board">
+<div class="count" id="count1">
+<span>1</span>
+</div>
+<div class="count" id="count2">
+<span>2</span>
+</div>
+<div class="count" id="count3">
+<span>3</span>
+</div>
+<div class="count" id="count4">
+<span>4</span>
+</div>
+<div class="count" id="count5">
+<span>5</span>
+</div>
+<div class="count" id="count6">
+<span>6</span>
+</div>
+<div class="count" id="count7">
+<span>7</span>
+</div>
+<div class="count" id="count8">
+<span>8</span>
+</div>
+<div class="count" id="count9">
+<span>9</span>
+</div>
+<div class="count" id="count10">
+<span>10</span>
+</div>
+<div class="count" id="count11">
+<span>11</span>
+</div>
+<div class="count" id="count12">
+<span>12</span>
+</div>
+<div class="count" id="count13">
+<span>13</span>
+</div>
+<div class="count" id="count14">
+<span>14</span>
+</div>
+<div class="count" id="count15">
+<span>15</span>
+</div>
+<div class="count" id="count16">
+<span>16</span>
+</div>
+<div class="count" id="count17">
+<span>17</span>
+</div>
+<div class="count" id="count18">
+<span>18</span>
+</div>
+<div class="count" id="count19">
+<span>19</span>
+</div>
+<div class="count" id="count20">
+<span>20</span>
+</div>
+<div class="count" id="count21">
+<span>21</span>
+</div>
+<div class="count" id="count22">
+<span>22</span>
+</div>
+<div class="count" id="count23">
+<span>23</span>
+</div>
+<div class="count" id="count24">
+<span>24</span>
+</div>
+<div class="count" id="count25">
+<span>25</span>
+</div>
+<div class="count" id="count26">
+<span>26</span>
+</div>
+<div class="count" id="count27">
+<span>27</span>
+</div>
+<div class="count" id="count28">
+<span>28</span>
+</div>
+<div class="count" id="count29">
+<span>29</span>
+</div>
+<div class="count" id="count30">
+<span>30</span>
+</div>
+<div class="count" id="count31">
+<span>31</span>
+</div>
+<div class="count" id="count32">
+<span>32</span>
+</div>
+<div class="count" id="count33">
+<span>33</span>
+</div>
+<div class="count" id="count34">
+<span>34</span>
+</div>
+<div class="count" id="count35">
+<span>35</span>
+</div>
+<div class="count" id="count36">
+<span>36</span>
+</div>
+<div class="count" id="count37">
+<span>37</span>
+</div>
+<div class="count" id="count38">
+<span>38</span>
+</div>
+<div class="count" id="count39">
+<span>39</span>
+</div>
+<div class="count" id="count40">
+<span>40</span>
+</div>
+<div class="count" id="count41">
+<span>41</span>
+</div>
+<div class="count" id="count42">
+<span>42</span>
+</div>
+<div class="count" id="count43">
+<span>43</span>
+</div>
+<div class="count" id="count44">
+<span>44</span>
+</div>
+<div class="count" id="count45">
+<span>45</span>
+</div>
+<div class="count" id="count46">
+<span>46</span>
+</div>
+<div class="count" id="count47">
+<span>47</span>
+</div>
+<div class="count" id="count48">
+<span>48</span>
+</div>
+<div class="count" id="count49">
+<span>49</span>
+</div>
+<div class="count" id="count50">
+<span>50</span>
+</div>
+<div class="count" id="count51">
+<span>51</span>
+</div>
+<div class="count" id="count52">
+<span>52</span>
+</div>
+<div class="count" id="count53">
+<span>53</span>
+</div>
+<div class="count" id="count54">
+<span>54</span>
+</div>
+<div class="count" id="count55">
+<span>55</span>
+</div>
+<div class="count" id="count56">
+<span>56</span>
+</div>
+<div class="count" id="count57">
+<span>57</span>
+</div>
+<div class="count" id="count58">
+<span>58</span>
+</div>
+<div class="count" id="count59">
+<span>59</span>
+</div>
+<div class="count" id="count60">
+<span>60</span>
+</div>
+<div class="count" id="count61">
+<span>61</span>
+</div>
+<div class="count" id="count62">
+<span>62</span>
+</div>
+<div class="count" id="count63">
+<span>63</span>
+</div>
+<div class="count" id="count64">
+<span>64</span>
+</div>
+<div class="count" id="count65">
+<span>65</span>
+</div>
+<div class="count" id="count66">
+<span>66</span>
+</div>
+<div class="count" id="count67">
+<span>67</span>
+</div>
+<div class="count" id="count68">
+<span>68</span>
+</div>
+<div class="count" id="count69">
+<span>69</span>
+</div>
+<div class="count" id="count70">
+<span>70</span>
+</div>
+<div class="count" id="count71">
+<span>71</span>
+</div>
+<div class="count" id="count72">
+<span>72</span>
+</div>
+<div class="count" id="count73">
+<span>73</span>
+</div>
+<div class="count" id="count74">
+<span>74</span>
+</div>
+<div class="count" id="count75">
+<span>75</span>
+</div>
+<div class="count" id="count76">
+<span>76</span>
+</div>
+<div class="count" id="count77">
+<span>77</span>
+</div>
+<div class="count" id="count78">
+<span>78</span>
+</div>
+<div class="count" id="count79">
+<span>79</span>
+</div>
+<div class="count" id="count80">
+<span>80</span>
+</div>
+<div class="count" id="count81">
+<span>81</span>
+</div>
+<div class="count" id="count82">
+<span>82</span>
+</div>
+<div class="count" id="count83">
+<span>83</span>
+</div>
+<div class="count" id="count84">
+<span>84</span>
+</div>
+<div class="count" id="count85">
+<span>85</span>
+</div>
+<div class="count" id="count86">
+<span>86</span>
+</div>
+<div class="count" id="count87">
+<span>87</span>
+</div>
+<div class="count" id="count88">
+<span>88</span>
+</div>
+<div class="count" id="count89">
+<span>89</span>
+</div>
+<div class="count" id="count90">
+<span>90</span>
+</div>
+<div class="count" id="count91">
+<span>91</span>
+</div>
+<div class="count" id="count92">
+<span>92</span>
+</div>
+<div class="count" id="count93">
+<span>93</span>
+</div>
+<div class="count" id="count94">
+<span>94</span>
+</div>
+<div class="count" id="count95">
+<span>95</span>
+</div>
+<div class="count" id="count96">
+<span>96</span>
+</div>
+<div class="count" id="count97">
+<span>97</span>
+</div>
+<div class="count" id="count98">
+<span>98</span>
+</div>
+<div class="count" id="count99">
+<span>99</span>
+</div>
+</div>
+
+</div>
+</main>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="logic.js"></script>
+</body>
+
+
+
+</html>
